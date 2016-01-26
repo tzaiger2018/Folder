@@ -33,8 +33,4 @@ public class RobotMap {
 	//0 and 1 are left side
 	//2 and 3 are right side
 	
-	public static int SPARE_MOTOR = 5;
-
-	
-	
 }

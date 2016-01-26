@@ -25,16 +25,17 @@ public class ChassisSubsystem extends Subsystem {
 	
 	public ChassisSubsystem() {
 		chassis = new RobotDrive(RobotMap.LEFT_FRONT_DRIVE, RobotMap.LEFT_REAR_DRIVE, RobotMap.RIGHT_FRONT_DRIVE, RobotMap.RIGHT_REAR_DRIVE);
-		spareMotor = new Victor (RobotMap.SPARE_MOTOR);
+		
 	}
     public void initDefaultCommand() {
         // Set the default command for a subsystem here.
         setDefaultCommand(new DriveCommand());	
         }
     
-    public void drive(Joystick stick){
-    	chassis.arcadeDrive(stick);
+    public void drive(double move, double rotate) {
+        chassis.arcadeDrive(move, rotate);
     }
+   
     
     public void StopDriving() {
     	chassis.stopMotor();

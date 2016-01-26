@@ -12,7 +12,10 @@ import edu.wpi.first.wpilibj.buttons.JoystickButton;
  */
 public class OI {
 	public Joystick driveStick;
+	
 	public Button spareMotor; 
+	
+	 
 	
 	public OI() {
 		driveStick = new Joystick(RobotMap.DRIVE_JOYSTICK);

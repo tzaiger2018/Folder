@@ -1,12 +1,13 @@
 
 package org.usfirst.frc.team6121.robot;
 
+import org.usfirst.frc.team6121.robot.commands.DriveCommand;
+import org.usfirst.frc.team6121.robot.subsystems.ChassisSubsystem;
+
 import edu.wpi.first.wpilibj.IterativeRobot;
 import edu.wpi.first.wpilibj.command.Command;
 import edu.wpi.first.wpilibj.command.Scheduler;
 import edu.wpi.first.wpilibj.livewindow.LiveWindow;
-import org.usfirst.frc.team6121.robot.commands.DriveCommand;
-import org.usfirst.frc.team6121.robot.subsystems.ChassisSubsystem;
 import edu.wpi.first.wpilibj.smartdashboard.SendableChooser;
 import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
 
@@ -24,19 +25,23 @@ public class Robot extends IterativeRobot {
 
     Command autonomousCommand;
     SendableChooser chooser;
-
-    /**
+	/**
      * This function is run when the robot is first started up and should be
      * used for any initialization code.
      */
     public void robotInit() {
-		oi = new OI();
+    	oi = new OI();
         chooser = new SendableChooser();
         chooser.addDefault("Default Auto", new DriveCommand());
 //        chooser.addObject("My Auto", new MyAutoCommand());
         SmartDashboard.putData("Auto mode", chooser);
+          autonomousCommand = null;
+		
+        
     }
-	
+     
+    
+   
 	/**
      * This function is called once each time the robot enters Disabled mode.
      * You can use it to reset any subsystem information you want to clear when
