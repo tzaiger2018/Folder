@@ -29,7 +29,7 @@ public class ChassisSubsystem extends Subsystem {
 	}
     public void initDefaultCommand() {
         // Set the default command for a subsystem here.
-        setDefaultCommand(new DriveCommand());	
+        setDefaultCommand(new DriveCommand());
         }
     
     public void drive(double move, double rotate) {

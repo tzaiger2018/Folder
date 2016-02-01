@@ -26,11 +26,9 @@ public class RobotMap {
 	public static int SPARE_LIMIT_SWITCH = 16;
 	
 	// PWM/Motor channel declarations
-	public static int LEFT_FRONT_DRIVE = 0;
-	public static int LEFT_REAR_DRIVE = 1;
-	public static int RIGHT_FRONT_DRIVE = 2;
-	public static int RIGHT_REAR_DRIVE = 3;
-	//0 and 1 are left side
-	//2 and 3 are right side
+	public static int LEFT_FRONT_DRIVE = 2;
+	public static int LEFT_REAR_DRIVE = 3;
+	public static int RIGHT_FRONT_DRIVE = 1;
+	public static int RIGHT_REAR_DRIVE = 0;
 	
 }

@@ -14,7 +14,11 @@ import org.usfirst.frc.team6121.robot.commands.ArmCommand;
  */
 public class ArmSubsystem extends Subsystem {
 	
-    
+	
+	public ArmSubsystem() {
+		
+	
+	}
     // Put methods for controlling this subsystem
     // here. Call these from Commands.
 
