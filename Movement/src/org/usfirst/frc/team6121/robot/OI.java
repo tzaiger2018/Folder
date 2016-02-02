@@ -1,10 +1,12 @@
 package org.usfirst.frc.team6121.robot;
 
 import org.usfirst.frc.team6121.robot.commands.StopMotorCommand;
+import org.usfirst.frc.team6121.robot.subsystems.ArmSubsystem;
 
 import edu.wpi.first.wpilibj.Joystick;
 import edu.wpi.first.wpilibj.buttons.Button;
 import edu.wpi.first.wpilibj.buttons.JoystickButton;
+import edu.wpi.first.wpilibj.command.Command;
 
 /**
  * This class is the glue that binds the controls on the physical operator
@@ -20,8 +22,11 @@ public class OI {
 	public OI() {
 		driveStick = new Joystick(RobotMap.DRIVE_JOYSTICK);
 		spareMotor = new JoystickButton(driveStick, RobotMap.STOP_MOTOR_BUTTON);
+		JoystickButton armButton = new JoystickButton(driveStick, RobotMap.ARM_BUTTON);
 		
 		spareMotor.whileHeld(new StopMotorCommand());
+		
+		armButton.whenPressed(new armMove());
 		
 	}
 	

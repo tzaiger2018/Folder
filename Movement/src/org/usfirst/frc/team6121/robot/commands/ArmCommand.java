@@ -1,6 +1,11 @@
 package org.usfirst.frc.team6121.robot.commands;
 
 import edu.wpi.first.wpilibj.command.Command;
+import edu.wpi.first.wpilibj.Timer;
+
+import org.usfirst.frc.team6121.robot.Robot;
+import org.usfirst.frc.team6121.robot.subsystems.ArmSubsystem;
+
 
 /**
  *
@@ -8,8 +13,7 @@ import edu.wpi.first.wpilibj.command.Command;
 public class ArmCommand extends Command {
 
     public ArmCommand() {
-        // Use requires() here to declare subsystem dependencies
-        // eg. requires(chassis);
+    	requires(Robot.armSubsystem);
     }
 
     // Called just before this Command runs the first time

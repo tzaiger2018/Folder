@@ -2,6 +2,7 @@
 package org.usfirst.frc.team6121.robot;
 
 import org.usfirst.frc.team6121.robot.commands.DriveCommand;
+import org.usfirst.frc.team6121.robot.subsystems.ArmSubsystem;
 import org.usfirst.frc.team6121.robot.subsystems.ChassisSubsystem;
 
 import edu.wpi.first.wpilibj.IterativeRobot;
@@ -21,6 +22,7 @@ import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
 public class Robot extends IterativeRobot {
 
 	public static final ChassisSubsystem chassisSubsystem = new ChassisSubsystem(); 
+	public static final ArmSubsystem armSubsystem = new ArmSubsystem();
 	public static OI oi;
 
     Command autonomousCommand;

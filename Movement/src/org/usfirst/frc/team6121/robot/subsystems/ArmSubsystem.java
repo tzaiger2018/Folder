@@ -19,6 +19,10 @@ public class ArmSubsystem extends Subsystem {
 		
 	
 	}
+	
+	public void armMove() {
+		
+	}
     // Put methods for controlling this subsystem
     // here. Call these from Commands.
 
