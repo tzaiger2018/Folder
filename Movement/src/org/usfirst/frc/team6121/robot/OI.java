@@ -26,7 +26,6 @@ public class OI {
 		
 		spareMotor.whileHeld(new StopMotorCommand());
 		
-		armButton.whenPressed(new armMove());
 		
 	}
 	
