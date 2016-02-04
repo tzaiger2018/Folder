@@ -29,10 +29,10 @@ public class RobotMap {
 	public static int SPARE_LIMIT_SWITCH = 16;
 	
 	// PWM/Motor channel declarations
-	public static Victor LEFT_FRONT_DRIVE = new Victor(2);
-	public static Victor LEFT_REAR_DRIVE = new Victor(3);
-	public static Victor RIGHT_FRONT_DRIVE = new Victor(1);
-	public static Victor RIGHT_REAR_DRIVE = new Victor(0);
+	public static int LEFT_FRONT_DRIVE = 2;
+	public static int LEFT_REAR_DRIVE = 3;
+	public static int RIGHT_FRONT_DRIVE = 1;
+	public static int RIGHT_REAR_DRIVE = 0;
 	
 	public static Victor ARM_MOVE = new Victor(2);
 	
