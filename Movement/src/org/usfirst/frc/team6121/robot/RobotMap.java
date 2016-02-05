@@ -23,7 +23,8 @@ public class RobotMap {
 	
 	// Joystic button declarations 
 	public static int STOP_MOTOR_BUTTON = 2;
-	public static int ARM_BUTTON = 6;
+	public static int ARM_DOWN_BUTTON = 4;
+	public static int ARM_UP_BUTTON = 6;
 	
 	//digital IO declarations 
 	public static int SPARE_LIMIT_SWITCH = 16;
@@ -34,6 +35,7 @@ public class RobotMap {
 	public static int RIGHT_FRONT_DRIVE = 1;
 	public static int RIGHT_REAR_DRIVE = 0;
 	
-	public static Victor ARM_MOVE = new Victor(2);
+	public static Victor ARM_UP_MOVE = new Victor(4);
+	public static Victor ARM_DOWN_MOVE = new Victor(5);
 	
 }

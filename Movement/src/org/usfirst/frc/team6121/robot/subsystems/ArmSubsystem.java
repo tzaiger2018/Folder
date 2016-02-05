@@ -20,9 +20,14 @@ public class ArmSubsystem extends Subsystem {
 	
 	}
 	
-	public void armMove() {
-		
+	public void armMoveUp() {
+		RobotMap.ARM_UP_MOTOR.set(1);
 	}
+	
+	public void armMoveDown() {
+		RobotMap.ARM_DOWN_MOTOR.set(1);
+	}
+	
     // Put methods for controlling this subsystem
     // here. Call these from Commands.
 

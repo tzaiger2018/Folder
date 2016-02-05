@@ -17,14 +17,19 @@ public class OI {
 	
 	public Button spareMotor; 
 	
-	 
+	public Button armUp;
+	public Button armDown;
 	
 	public OI() {
 		driveStick = new Joystick(RobotMap.DRIVE_JOYSTICK);
 		spareMotor = new JoystickButton(driveStick, RobotMap.STOP_MOTOR_BUTTON);
-		JoystickButton armButton = new JoystickButton(driveStick, RobotMap.ARM_BUTTON);
+		JoystickButton armUp = new JoystickButton(driveStick, RobotMap.ARM_UP_BUTTON);
+		JoystickButton armDown = new JoystickButton(driveStick, RobotMap.ARM_DOWN_BUTTON);
 		
 		spareMotor.whileHeld(new StopMotorCommand());
+		
+		armUp.whileHeld(new armMoveUp());
+		armDown.whileHeld(new armMoveDown());
 		
 		
 	}
