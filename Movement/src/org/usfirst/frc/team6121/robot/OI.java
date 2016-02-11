@@ -30,8 +30,6 @@ public class OI {
 		
 		armUp.whileHeld(new armMoveUp());
 		armDown.whileHeld(new armMoveDown());
-		
-		
 	}
 	
     //// CREATING BUTTONS
