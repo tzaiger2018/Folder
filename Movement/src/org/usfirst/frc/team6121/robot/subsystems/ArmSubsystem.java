@@ -22,16 +22,16 @@ public class ArmSubsystem extends Subsystem {
 	public void armMoveUp() {
 		if (ARM_UP_BUTTON.get() == true) {
 			RobotMap.ARM_UP_MOTOR.set(1);
+		} else if (ARM_DOWN_BUTTON.get() == true) {
+			RobotMap.ARM_UP_MOTOR.set(-1);
 		} else {
 			RobotMap.ARM_UP_MOTOR.set(0);
 		}
 	}
 	
 	public void armMoveDown() {
-		if (ARM_DOWN_BUTTON.get() == true) {
-			RobotMap.ARM_DOWN_MOTOR.set(1);
-		} else {
-			RobotMap.ARM_DOWN_MOTOR.set(0);
+		if (ARM_DOWN_BUTTON.get() == false) {
+			RobotMap.ARM_UP_MOTOR.set(0);
 		}
 	}
 	

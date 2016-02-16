@@ -36,6 +36,36 @@ public class ChassisSubsystem extends Subsystem {
         chassis.arcadeDrive(move, rotate);
     }
    
+    public void robotDrive(double move, double rotate) {
+    	
+    	public chassisFrontLeft = RobotMap.LEFT_FRONT_DRIVE;
+    	public chassisRearLeft = RobotMap.LEFT_REAR_DRIVE;
+    	public chassisFrontRight = RobotMap.RIGHT_FRONT_DRIVE;
+    	public chassisRearRight = RobotMap.RIGHT_REAR_DRIVE;
+
+    	if (move == 0 && rotate == 0) {
+    		chassisFrontLeft.set(0);
+    		chassisRearLeft.set(0);
+    		chassisFrontRight.set(0);
+    		chassisRearRight.set(0);
+    	}
+    	
+    	if (move < 0) {
+    		chassisRearLeft.set(move);
+    		chassisRearRight.set(move);
+    	} else if (move > 0) {
+    		chassisFrontLeft.set(move);
+    		chassisFrontRight.set(move);
+    	}
+    	
+    	if (rotate > 0) {
+    		chassisFrontLeft.set(rotate);
+    		chassisRearRight.set(-rotate);
+    	} else if (rotate < 0) {
+    		chassisFrontRight.set(rotate);
+    		chassisRearLeft.set(-rotate);
+    	}
+    }
     
     public void StopDriving() {
     	chassis.stopMotor();
